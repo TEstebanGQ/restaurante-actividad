@@ -1,4 +1,4 @@
-from ui.menus import menuPrincipal
+from ui.Menus import menuPrincipal
 import sys
 
 if __name__ == "__main__":

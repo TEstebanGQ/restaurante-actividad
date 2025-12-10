@@ -5,9 +5,7 @@ def inputSeguro(mensaje):
     """
     try:
         valor = input(mensaje).strip()
-        if valor == "":
-            return None
-        return valor
+        return None if valor == "" else valor
     except (KeyboardInterrupt, EOFError):
         print("\n✗ Entrada cancelada por el usuario.")
         return None
@@ -23,7 +21,7 @@ def confirmarAccion(mensaje="¿Confirmar? (S/N): "):
             respuesta = input(mensaje).strip().upper()
             
             if respuesta == "":
-                print("✗ No puede dejar este campo vacío. Ingrese S para confirmar o N para cancelar.")
+                print(" No puede dejar este campo vacío. Ingrese S para confirmar o N para cancelar.")
                 continue
             
             if respuesta == "S":
@@ -31,8 +29,8 @@ def confirmarAccion(mensaje="¿Confirmar? (S/N): "):
             elif respuesta == "N":
                 return False
             else:
-                print("✗ Opción inválida. Ingrese 'S' para SÍ o 'N' para NO.")
+                print(" Opción inválida. Ingrese 'S' para SÍ o 'N' para NO.")
                 
         except (KeyboardInterrupt, EOFError):
-            print("\n✗ Entrada cancelada por el usuario.")
+            print("\nEntrada cancelada por el usuario.")
             return None
